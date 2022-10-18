@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+
+        <script>
+            // Execução do professor
+            // (function (){
+            //     window.addEventListener('load', init)
+
+            //     function init(){
+            //         var $paragrafos = document.querySelectorAll('p')
+
+            //         var x = 0;
+
+            //         while($paragrafos[x]){
+            //             $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML)
+            //             x++;
+            //         }
+            //     }
+
+            //     function formatarTexto(texto){
+            //         var numMaximoCaracteres = 200;
+            //         if(texto.length <= numMaximoCaracteres) {
+            //             return texto;
+            //         }
+
+            //         var subTexto = texto.slice(0, numMaximoCaracteres);
+            //         return subTexto + '...';
+            //     }
+            // })()
+            
+            // Minha execução após consulta
+            
+            (function(){
+                window.addEventListener('load', init)
+
+                function init(){
+                    var $exemplo = document.querySelectorAll("p");
+                    
+                    var x = 0;
+
+                    while($exemplo[x]){
+                        $exemplo[x].innerHTML = recortar($exemplo[x].innerHTML);
+                        x++;
+                    }
+                }
+
+                function recortar(textoPresente) {
+                    if(textoPresente.length <= 100){
+                        return textoPresente
+                    }
+
+                    var recorte = textoPresente.slice(0, 100);
+                    return recorte + "...";
+                }
+
+            })()
+            
+             
+
+            
+        </script>
+        
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <h2>Caso haja mais de 200 caracteres em algum dos parágragos, substituir o restante com reticencias</h2>
+
+        
+        
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor porta quam, eu aliquam orci vehicula ac. Donec molestie nulla leo, quis tempor velit sodales ac. Proin in velit ac libero vulputate faucibus ut eu tellus. Morbi posuere nisi nibh, laoreet aliquet lacus aliquam vitae. Quisque facilisis venenatis metus a condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam luctus quam quam, in suscipit mauris varius viverra. Donec dui felis, pellentesque a sem vel, scelerisque venenatis odio. Ut id vulputate massa. Morbi in nisi suscipit, volutpat nisl at, accumsan neque. Integer dapibus tincidunt risus, non lobortis nibh dictum eu. Suspendisse libero libero, ornare in eleifend et, varius et nisi. Proin id sem tempor, venenatis purus efficitur, molestie nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor porta quam, eu aliquam orci vehicula ac. Donec molestie nulla leo, quis tempor velit sodales ac. Proin in velit ac libero vulputate faucibus ut eu tellus. Morbi posuere nisi nibh, laoreet aliquet lacus aliquam vitae. Quisque facilisis venenatis metus a condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam luctus quam quam, in suscipit mauris varius viverra. Donec dui felis, pellentesque a sem vel, scelerisque venenatis odio. Ut id vulputate massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor porta quam, eu aliquam orci vehicula ac. Donec molestie nulla leo, quis tempor velit sodales ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor porta quam, eu aliquam orci vehicula ac. Donec molestie nulla leo, quis tempor velit sodales ac.
+            </p>
+        </div>
+        
+        <div id="output"></div>
+        
+        
+        
+    </body>
+</html>

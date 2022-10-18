@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+
+        
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <input type="text" id="txtNome" value="Digite o nome">
+        
+        <script>
+            
+            var $txt = document.querySelector('#txtNome');
+            console.log($txt)
+            var nome = "Renan ";
+            var sobrenome = "S. Rodrigues";
+
+            $txt.value = nome + sobrenome;
+
+            // document.querySelector('#txtNome').value = nome + sobrenome;
+            // document.querySelector('#txtNome').disabled = true;
+            
+
+        </script>
+
+    </body>
+</html>

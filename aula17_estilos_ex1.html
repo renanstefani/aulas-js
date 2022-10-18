@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript BOM</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan S.">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+
+        <style type="text/css">
+
+            .teste{
+                background: red;
+            }
+
+        </style>
+            
+        </head>
+        <body>
+ 
+            <h1>Javascript Completo</h1>
+            
+            <div class="teste" style="background: green;">Apenas um teste</div>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo quidem eius nobis sequi exercitationem? Commodi reiciendis quibusdam, asperiores perferendis, cumque earum sed eum tenetur dicta, ex ullam magni quas ab!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatibus, mollitia tempore perferendis cupiditate voluptas tenetur est alias aperiam magnam inventore a totam accusamus repellendus consequatur natus quis numquam earum?</p>
+            <p>Rerum sint non ad aspernatur voluptatum incidunt, ipsum perspiciatis fugit blanditiis itaque animi pariatur porro dolor, natus saepe? Fugit cupiditate eum saepe architecto, voluptate dolor nihil placeat impedit perferendis atque?</p>
+            <p>Distinctio repellendus modi explicabo tempora tenetur voluptate pariatur error sequi unde quae alias rerum repudiandae, et sapiente nihil? Obcaecati sint illum quos accusamus mollitia, nam quibusdam ratione consequuntur perferendis unde?</p>
+            <p>Ipsum maiores, temporibus sed suscipit libero vel distinctio esse. Consectetur ea officiis ipsum deleniti alias id architecto odit consequatur, rerum, veritatis quidem, voluptate quas enim! Tenetur eaque repudiandae distinctio minima?</p>
+            <p>Enim ipsum nemo explicabo, voluptates minima laboriosam odit ducimus eius aspernatur corrupti perferendis eligendi unde nisi dicta esse eveniet! Officiis odio quod eveniet dolor similique iure temporibus a vitae deserunt?</p>
+            <p>Odit, dolore ullam a accusantium exercitationem at suscipit, non debitis nostrum dignissimos similique accusamus adipisci dolorem eaque perspiciatis, temporibus culpa animi minus eos? Voluptas dignissimos iure quo maiores, non iste.</p>
+            <p>Sed nostrum rem obcaecati doloremque facere itaque quasi enim reiciendis fugit tempore laborum quaerat aut dolore distinctio quia, ipsum ut sapiente consequuntur, nemo quidem odit, alias ipsa ipsam sunt? Odio!</p>
+            <p>Harum, facilis, perferendis deleniti voluptatibus consectetur quos velit adipisci exercitationem molestias officiis minus et cumque, eius molestiae eos minima a commodi? Blanditiis odit itaque, dicta minus nobis beatae quidem laboriosam!</p>
+            <p>Veniam neque deserunt repellat qui ab expedita, obcaecati, voluptatum nihil vitae necessitatibus nesciunt ad mollitia sed similique dolores et blanditiis maxime suscipit officiis? Doloremque perspiciatis consequuntur fuga iusto expedita debitis.</p>
+            <p>Dignissimos consequuntur aspernatur error a quo omnis eligendi expedita voluptatem, architecto officiis dolor aut delectus dolores dolore ratione amet placeat. Tempora dolorum quod facilis tenetur iure sint, ullam ratione exercitationem.</p>
+
+            <div class="teste2"></div>
+            
+            
+            <script>
+                var $teste = document.querySelector('.teste');
+
+                console.log($teste.style.background);
+                // a propriedade style define ou recupera apenas o style inline
+
+                console.log('computado: ', getComputedStyle($teste).background);
+                // o window.getComputedStyle recupera ou define o style computado ou seja o resultado de todas as regras de css aplicadas (valor final)
+
+                var $p = document.querySelector('p');
+
+                console.log($p.offsetHeight, $p.offsetWidth);
+                console.log($p.offsetLeft, $p.offsetTop);
+                // "offsetXXXXX" como mostrado acima mostra a posição do elemento em relação ao DOCUMENTO
+
+                var $teste2 = document.querySelector('.teste2');
+                console.log($teste2.offsetLeft, $teste2.offsetTop);
+
+                console.log($teste2.getBoundingClientRect());
+                // retorna um DOMRect, o mesmo fornece a posição x e y, a largura e altura do elemento e posições relativas a viewport e não ao documento
+
+
+            </script>
+            
+        </body>
+    </html>

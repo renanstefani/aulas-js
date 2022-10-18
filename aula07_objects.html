@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título da página no navegador </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Renan">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="javascript, tecnologia">
+
+
+</head>
+
+<body>
+    <div>
+        <h1>Curso Javascript Completo</h1>
+
+    </div>
+
+
+
+    <script>
+        var hoje = new Date();
+
+        var x = [0];
+        function mudaArr(x) {
+            var y = x;
+            y.push(2);
+            x.push(3);
+        }
+        
+        mudaArr(x);
+
+        console.log('valor de x: ', x);
+
+        // var contendo objetos são passadas por referencia, no exemplo acima todos os valores apontam para o mesmo lugar (x), x possui 3 indices e todos são passados referenciando a x.
+        // até mesmo x fora da function retorna o mesmo valor
+        // um array contendo os mesmos valores não são iguais, pois cada um é um objeto.
+        // vide console.log para melhor entendimento
+
+
+        console.log('-----------------');
+
+        var n = 0;
+        function mudaN(n) {
+            var n2 = n;
+            console.log(++n2);
+        }
+
+        mudaN(n);
+        console.log(n);
+
+        // var com valores primitivos (string, number, boolean, null, undefined e symbol) são passadas por valor e não referencia, no exemplo acima como tratamos de um valor primitivo (número 0)
+        // dentro da função n == 1, fora da função n == 0
+        // vide console para melhor entendimento
+
+        console.log('-----------------');
+
+        function defineCor(cor) {
+            this.cor = cor;
+        }
+
+        var caneta1 = {
+            cor: 'red',
+            mudarCor: defineCor
+        }
+
+        caneta1.mudarCor('blue');
+        console.log(caneta1);
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

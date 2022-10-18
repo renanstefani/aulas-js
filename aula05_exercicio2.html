@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+        
+        <div id="output"></div>
+        
+        <script>
+                function calcularImc(peso, altura){
+                    var resultado = peso / (altura * altura);
+   
+                    (function() {
+                        if (resultado >= 16 && resultado <= 16.9){
+                            console.log('Muito abaixo do peso');
+                        }
+                        if (resultado >= 17 && resultado <= 18.4){
+                            console.log('Abaixo do peso');
+                        }
+                        if (resultado >= 18.5 && resultado <= 24.9){
+                            console.log('Peso normal');
+                        }
+                        if (resultado >= 25 && resultado <= 29.9){
+                            console.log('Acima do peso');
+                        }
+                        if (resultado >= 30 && resultado <= 34.9){
+                            console.log('Obesidade Grau 1');
+                        }
+                        if (resultado >= 35 && resultado <= 40){
+                            console.log('Obesidade Grau 2');
+                        }
+                        if (resultado >= 40){
+                            console.log('Obesidade Grau 3');
+                        }
+                        
+                    })();
+
+                    return console.log('Seu IMC é: ', resultado);
+                };
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript temporizadores </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+
+        <style>
+            .banner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 0 1000px rgba(0,0,0,.8);
+                display: none;
+            }
+
+            .banner__close{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Javascript Temporizadores</h1>
+
+        <div class="banner">
+            <h2>Banner irritante</h2>
+            <button class="banner__close">X</button>
+            <p>Palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras </p>
+            <p>Palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras </p>
+            <p>Palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras palavras </p>
+        </div>
+
+        
+        <script>
+            (function(){
+                var $banner = document.querySelector('.banner');
+                var $bannerBtn = document.querySelector('.banner__close');
+
+                $bannerBtn.addEventListener('click', esconderBanner);
+
+                var intervaloEsconder = null;
+
+                function mostrarBanner(){
+                    $banner.style.display = 'block';
+
+                    intervaloEsconder = setTimeout(esconderBanner, 5000);
+                }
+
+                function esconderBanner(){
+                    $bannerBtn.removeEventListener('click', esconderBanner);
+                    $banner.parentNode.removeChild($banner);
+
+                    clearTimeout(intervaloEsconder);
+                }
+
+                setTimeout(mostrarBanner, 3000);
+
+
+            })()
+
+        </script>
+            
+            
+
+        
+    </body>
+</html>

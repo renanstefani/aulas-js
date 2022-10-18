@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan S.">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        <h1>Javascript Completo</h1>
+        
+        
+        <script>
+            // 'return' sai da função retorando algo
+            // 'break' sai do loop ou block switch
+            // 'continue' volta e continua o loop incrementando
+            function testeSaltos(){
+
+                for(i = 0; i < 10; i++){
+                    if(i === 5){
+                        continue;
+                    }
+                    console.log(i); 
+                }
+
+                console.log('fim do loop');
+                return 'fim da function'
+            }
+
+            var teste = testeSaltos();
+            console.log(teste);
+            
+            var n = 10;
+
+            switch (n){
+                case 0:
+                    console.log('switch 0');
+                    break;
+            
+                case 10:
+                    console.log('switch 10');
+                    break;
+            
+                case 20:
+                    console.log('switch 20');
+                    break;
+
+                case 30:
+                    console.log('switch 30');
+                    break;
+
+                default:
+                    console.log('switch default');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        
+        <h1>Lógica de programação com Javascript</h1>
+        
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">*</button>
+        <button onclick="calcular('/')">/</button>
+        
+        <div id="output"></div>
+        
+        <script>
+
+            console.log("Testando o meu código.");
+            
+            var n1 = prompt('digite um numero');
+            n1 = parseInt(n1);
+                        
+            escreve();
+            
+            function escreve(){
+                console.log('---------');
+                console.log(n1);
+            }
+            
+            
+            function calcular(simbolo){
+                var n = prompt('digite outro numero');
+                n = parseInt(n);
+                                
+                switch(simbolo){
+                    case '+':
+                        n1 = n1 + n;
+                        break;
+                    case '-':
+                        n1 = n1 - n;
+                        break;
+                    case '*':
+                        n1 = n1 * n;
+                        break;
+                    case '/':
+                        n1 = n1 / n;
+                }
+                
+                escreve();                
+            }
+        </script>
+            
+            
+            
+            
+
+        
+
+        
+    </body>
+</html>

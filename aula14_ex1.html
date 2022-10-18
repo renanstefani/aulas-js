@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript Date exercise </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+
+        <div>
+            <h1>JavaScript Date exercise</h1>
+
+        </div>
+       
+
+        
+        <script>
+            (function(){
+                var dataAtual = new Date();
+                dataAtual.setHours(0);
+                dataAtual.setMinutes(0);
+                dataAtual.setSeconds(0);
+                dataAtual.setMilliseconds(0);
+
+                var anoAtual = dataAtual.getFullYear();
+                
+                var dataAniversario = new Date(anoAtual, 9, 19);
+
+                var dataAtualTS = dataAtual.getTime();
+                var dataAniversarioTS = dataAniversario.getTime();
+
+                if(dataAniversarioTS === dataAtualTS){
+                    alert('Parabéns pelo seu aniversário.')
+                }
+                
+                if(dataAniversarioTS < dataAtualTS){
+                    dataAniversario.setFullYear(++anoAtual);
+                    dataAniversarioTS = dataAniversario.getTime();
+                }
+                
+                const UM_DIA_TS = 24 * 60 * 60 * 1000;
+                
+                var diferenca = dataAniversarioTS - dataAtualTS;
+                console.log(diferenca / UM_DIA_TS);
+
+            })()
+
+        </script>
+            
+            
+
+        
+    </body>
+</html>

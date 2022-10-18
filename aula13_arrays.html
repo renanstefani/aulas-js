@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+        
+        <div id="output"></div>
+        
+        <script>
+            var arr = ['1',2,3,4,5, 'seis', 7, 'oito', 9, 10, '1'];
+
+            var apenasNumeros = arr.every( function(elemento, indice, objeto){
+                //apenas o primeiro parametro acima é obrigatório
+                return typeof elemento === 'number';
+     
+            } )
+            //no métorodo every, é preciso que todos elementos sejam true para que retorne true
+            console.log('Método every: ' + apenasNumeros);
+            
+            
+            var aoMenosUmNumero = arr.some( function(elemento, indice, objeto){
+                return typeof elemento === 'number';
+     
+            } )
+            //neste exemplo do método some, se ao menos um dos elementos forem true, ele retornará true
+            console.log('Método some: ' + aoMenosUmNumero);
+
+            var numeros = arr.filter(function(elemento, indice, arr){
+                return typeof elemento === 'number';
+            });
+            console.log(numeros);
+
+            arr.forEach(function(el, i, arr){
+                console.log('el: ', el, '  |  i: ', i, '  |  i - ', arr.toString())
+            })
+
+            var posicaoStr1 = arr.indexOf('seis', 5);
+            //indexOf assim como em strings, vai indicar a posição do indice requisitado, o segundo parâmetro é opcional e indica o ponto em que quer iniciar a busca
+            console.log(posicaoStr1);
+
+            var posicaoStr2 = arr.lastIndexOf('1', 5);
+            //lastIndexOf assim como em strings, vai indicar a última posição do indice requisitado, o segundo parâmetro é opcional e indica o ponto final da busca
+            console.log(posicaoStr2);
+
+            console.log('Antes de aplicar o map: ' + numeros);
+            numeros = numeros.map(function(elemento, indice, arr){
+                return elemento * indice;
+            });
+            //o map vai iterar cada elemento e aplicar a alteração necessária, no exemplo acima multiplicamos o valor do elemento pelo valor de seu indice
+            console.log(numeros);
+
+            var arr2 = arr.concat(numeros, 'elemento adicionado', 'outro elemento');
+            //o método concat vai concatenar as duas arrays desse exemplo (arr + numeros), deixando as originais intactas; também podemos incluir mais elementos como parametro
+            console.log(arr2);
+
+            var strArr2 = arr2.join(' - ');
+            //o método join transforma a array em uma string, caso receba um parametro o mesmo será usado como separador dos elementos, ao contrário da vírgula
+            console.log(strArr2);
+
+            arr.push('item por push');
+            //o método push insere o elemento no final de uma array, alterando o original 
+            console.log(arr);
+
+            var ultimoItem = arr.pop();
+            //o método pop retira o último item da array, devolvendo a quem o chamou, alterando o original
+            console.log(arr);
+
+            var primeiroItem = arr.shift();
+            //o método shit retira o primeiro item da array, devolvendo a quem o chamou, alterando o original
+            console.log(arr);
+
+            arr.unshift(true, false, 'unshift')
+            //o método unshift insere elementos no início de uma array, alterando o original 
+            console.log(arr);
+            
+            var somaDeArr = numeros.reduce(function(anterior, atual){
+                return anterior + atual;
+            }, 10)
+            //o método reduce retorna um único valor a partir de uma array, sempre vai receber pelo menos 2 parametros, um terceiro caso queira utilizar o indice e um quarto caso queira utilizar a própria array (anterior, atual, indice, array)
+            //o número fora das chaves é utilizado caso queira indicar um valor inicial, nesse caso: anterior = 10
+            console.log(somaDeArr);
+
+            var testeReduce = ['1', '2', '3'].reduceRight(function(i, a){
+                return i + a;
+            });
+            //o método reduceRight vai retornar um único valor, na sequencia inversa no exemplo acima (321)
+            console.log(testeReduce);
+
+            var arr = [10, 20, 30];
+            arr.reverse();
+            //o método reverse vai inverter a sequencia dos elementos no array original alterando o mesmo, no exemplo acima [30, 20, 10]
+            console.log(arr);
+
+            var arrSlice = arr2.slice(2, 6);
+            //o método slice vai recortar uma parte do array, sem alterar o original, caso não seja passado um segundo parametro o recorte será até o fim, o valor dos parâmetros é a posição do elemento dentro da array e não seu indice
+            //no exemplo acima, o recorte começa do terceiro elemento até o sexto, incluindo o sexto e excluindo o segundo
+            console.log(arrSlice);
+
+            
+            var arrSplice = arr2.splice(5, 4, 'novo', 'elemento');
+            //o primeiro parametro é a posição que começaremos a transformação da array, o segundo parametro indica quantos elementos queremos remover, a partir do terceiro são os elementos que queremos incluir na array
+            //no exemplo acima: a partir do elemento 5, exclua 4 elementos e insira os elementos 'novo' e 'elemento'
+            console.log(arr2);
+
+
+            
+        </script>
+            
+            
+
+        
+    </body>
+</html>

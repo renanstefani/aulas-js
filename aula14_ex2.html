@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript Date exercise </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+
+        <div>
+            <h1>JavaScript Date exercise</h1>
+
+        </div>
+       
+
+        
+        <script>
+            //minha execução:
+            // (function(){
+            //     var dataAtual = new Date();
+                
+            //     var diaAtual = dataAtual.getDate();
+            //     var mesAtual = dataAtual.getMonth();
+            //     var anoAtual = dataAtual.getFullYear();
+
+            //     return console.log('A data de hoje é: ' + diaAtual + '/' + (mesAtual + 1) + '/' + anoAtual);
+            // })()
+
+            //execução do professor:
+
+            (function (){
+                var data = new Date();
+                data.setDate(2);
+                data.setMonth(5);
+
+                
+
+                function formatDate(data){
+                    var dia = data.getDate() < 10 ? '0' + data.getDate() : data.getDate();
+
+                    var mes = data.getMonth() + 1;
+                    mes = mes < 10 ? '0' + mes : mes;
+
+                    return dia + '/' + mes + '/' + data.getFullYear();
+                }
+
+                console.log(formatDate(data))
+            })()
+
+
+        </script>
+            
+            
+
+        
+    </body>
+</html>

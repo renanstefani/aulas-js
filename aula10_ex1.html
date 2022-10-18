@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+        
+        <div id="output"></div>
+        
+        <script>
+            
+            var nome = "Renan Stefani Rodrigues";
+
+            var nomeFormatado = formatarNome(nome);
+
+            function formatarNome(nome){
+                // retornar "Rodrigues, Renan Stefani"
+
+                var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+
+                if(posicaoUltimoEspaco <= 0) {
+                    //caso não haja espaço na string, retornar o nome diretamente
+
+                    return nome;
+                }
+
+                var ultimoNome = nome.slice(posicaoUltimoEspaco + 1);
+                // como não passamos o segundo parametro, o slice vai até o final da string a partir do ultimo espaço +1 (ou seja o primeiro caracter após o ultimo espaço)
+
+                var primeiroNome = nome.slice(0, posicaoUltimoEspaco)
+                // o slice vai desde o primeiro caracter da string até o ultimo espaço
+
+                return ultimoNome + ', ' + primeiroNome;
+
+            }
+
+            console.log(nomeFormatado)
+        </script>
+        
+    </body>
+</html>

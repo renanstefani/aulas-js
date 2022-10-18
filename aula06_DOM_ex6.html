@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título da página no navegador </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Renan">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="javascript, tecnologia">
+
+
+</head>
+
+<body>
+    <div>
+        <h1>Curso Javascript Completo</h1>
+
+        <p>Parágrafo para uso em atividade.</p>
+
+        <p>Segundo parágrafo para uso em atividade.</p>
+
+        <p>Terceiro parágrafo para uso em atividade.</p>
+
+        <p>Quarto parágrafo para uso em atividade.</p>
+
+    </div>
+
+
+
+    <script>
+
+        (function () {
+            'use strict'
+            var paragrafos = document.querySelectorAll('p');
+
+            for (var x = 0; x < paragrafos.length; x++) {
+                paragrafos[x].textContent = "Estes parágrafos foram alterados por \"alguém\".";
+            };
+
+            // var x = 0;
+            // while(paragrafos[x]){
+            //     paragrafos[x].textContent = "Estes parágrafos foram alterados por \"alguém\".";
+            //     x++;
+            // }
+
+        })();
+
+
+    </script>
+
+</body>
+
+</html>

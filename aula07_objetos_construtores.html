@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título da página no navegador </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Renan">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="javascript, tecnologia">
+
+
+</head>
+
+<body>
+    <div>
+        <h1>Curso Javascript Completo</h1>
+
+    </div>
+
+
+
+    <script>
+        // Existe uma prática no js em que functions responsáveis por criarem objetos (construtoras) geralmente começam com letra maíuscula
+
+        
+        var Caneta = (function (window){
+            'use strict';
+            console.log(this);
+            function _caneta(preco, cor) {
+
+                //privado
+                var color = cor || 'black';
+                //publicas
+                this.preco = preco || 1;
+
+                this.mudarCor = function(cor) {
+                    color = cor;
+                }
+
+                this.mostraCor = function() {
+                    if (cor !== 'red' && cor !== 'blue' && cor !== 'black' && cor !== 'green'){
+                        return;
+                    }
+                    return color;
+                }
+
+            }
+
+            return _caneta;
+        }) (window)
+        
+        var caneta1 = new Caneta(56, 'red');
+        
+        
+
+
+    </script>
+
+</body>
+
+</html>

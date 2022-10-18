@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo</h1>
+        </div>
+        
+        
+        <section>
+        	<div class="container">
+	        
+		      	<h2>Média dos alunos</h2>
+				<table class="table js-tabela">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Nota 1</th>
+							<th>Nota 2</th>
+							<th>Nota 3</th>
+							<th>Nota 4</th>
+							<th>Média</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="aluno">
+							<td class="aluno-nome">Gertrude</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">9</td>
+							<td class="aluno-n4">7.5</td>	
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno">
+							<td class="aluno-nome">Rey</td>
+							<td class="aluno-n1">5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">6.5</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno">
+							<td class="aluno-nome">Jessilda</td>
+							<td class="aluno-n1">8</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">7</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno">
+							<td class="aluno-nome">Lindóia</td>
+							<td class="aluno-n1">6.5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+						<tr class="aluno">
+							<td class="aluno-nome">Creysson</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">9.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">8.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+					</tbody>
+				</table>
+	        	
+        	</div>	
+        </section>
+
+        <script>
+            
+            (function(){
+                'use strict'
+                var trs = document.querySelectorAll('.js-tabela tbody .aluno');
+
+				var x = 0;
+				while(trs[x]){
+					//armezenamos as linhas em uma variavel
+					var linhaAluno = trs[x];
+					console.log(linhaAluno);
+
+					//armazenamos os campos de notas e media em variaveis
+					var n1, n2, n3, n4, media;
+
+					//definimos uma variavel que seleciona todas as tds
+					var tds = linhaAluno.querySelectorAll('td');
+					console.log(tds);
+
+					//definimos quais tds são as notas
+					n1 = pegaNota(tds[1]);
+					n2 = pegaNota(tds[2]);
+					n3 = pegaNota(tds[3]);
+					n4 = pegaNota(tds[4]);
+					
+					//calculamos a media com a function criada no nosso arquivo de script
+					media = calcularMedia(n1, n2, n3, n4);
+					
+					//selecionamos a td para mostrar a media calculada
+					linhaAluno.querySelector('.aluno-m').textContent = media;
+
+					//acrescentamos 1 ao loop para percorrermos todas as linhas
+					x++;
+				}
+
+				//transformamos as strings das tds em numeros
+				function pegaNota(td){
+					return parseFloat(td.textContent);
+				}
+
+                
+            })()
+            
+        </script>
+        
+    </body>
+</html>

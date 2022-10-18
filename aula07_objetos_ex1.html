@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título da página no navegador </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Renan">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="javascript, tecnologia">
+
+
+</head>
+
+<body>
+    <div>
+        <h1>Curso Javascript Completo</h1>
+
+    </div>
+
+
+
+    <script>
+
+        
+        var pessoa1 = {
+            nome: 'Renan',
+            sobrenome: 'Primeiro'
+        };
+        
+        var pessoa2 = {
+            nome: 'Renan',
+            sobrenome: 'Segundo'
+        };
+        
+        var pessoa3 = {
+            nome: 'Renan',
+            sobrenome: 'Terceiro'
+        };
+        
+
+        for (var i = 1; i<= 3; i++) {
+            console.log(window['pessoa'+i].nome + ' ' + window['pessoa'+i].sobrenome);
+        }
+
+
+    </script>
+
+    
+
+</body>
+
+</html>

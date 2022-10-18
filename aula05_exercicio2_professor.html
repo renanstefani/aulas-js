@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Título da página no navegador </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan Stefani">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+        
+        <div id="output"></div>
+        
+        <script>
+                (function (){
+                    function calcularIMC(peso, altura, callback){
+                        var imc = peso / (altura * altura);
+
+                        if(callback && typeof callback === 'function' ){
+                            return callback(imc);
+                        }
+
+                        console.log('Não passou callback');
+                        return imc;
+                    }
+
+                    function classificaIMC(imc){
+                        
+                        if(imc <= 16.9){
+                            return 'Muito abaixo do peso';
+                        } else if (imc <= 18.4){
+                            return 'Abaixo do peso';
+                        } else if (imc <= 24.9){
+                            return 'Peso normal'
+                        } else if (imc <= 29.9){
+                            return 'Acima do peso'
+                        } else if (imc <= 34.9){
+                            return 'Obesidade grau 1'
+                        } else if (imc <= 40){
+                            return 'Obesidade grau 2'
+                        } else if (imc < 40){
+                            return 'Obesidade grau 3'
+                        }
+                    }
+
+                    var peso = 65;
+                    var altura = 1.75;
+
+                    var imc = calcularIMC(peso, altura, classificaIMC);
+                    
+
+                    console.log('Classificação IMC: ', imc);
+
+                })();
+        </script>
+        
+        
+    </body>
+</html>

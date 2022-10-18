@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título da página no navegador </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Renan">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="javascript, tecnologia">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Curso Javascript Completo</h1>
+
+        <form action="#">
+            <label for="txtUser">Usuário:</label>
+            <input type="text" id="txtUser" name="user"><br>
+
+            <label for="txtPass">Senha:</label>
+            <input type="password" id="txtPass" name="pass"><br>
+
+            <button type="button" id="btn">Logar</button>
+        </form>
+    </div>
+
+
+    <script>
+        
+        (function(){
+            'use strict';
+            var $txtUser = document.getElementById('txtUser');
+            var $txtPass = document.getElementById('txtPass');
+            var $btn = document.getElementById('btn');
+
+            $btn.addEventListener('click', function(){
+                
+                if(!$txtUser.value || !$txtPass.value) {
+                    // Raciocínio acima: se não houver value em user ou pass. (o mesmo de txtUser === "")
+                    alert('Preencha todos os campos.');
+                }
+
+            });
+
+
+        })()
+        
+    </script>
+
+    
+
+</body>
+
+</html>

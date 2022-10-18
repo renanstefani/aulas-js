@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript BOM</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan S.">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        <h1>Javascript BOM (Browser Object Model)</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cumque et possimus, eaque esse quam culpa rerum harum ipsum nobis vero tempore quos fugiat. Sapiente, optio. Facilis, dolore quas?</p>
+        
+        
+        <script>
+            
+            window.addEventListener('load', function(){
+                console.log('load disparado');
+                // load é acionado quando todo o conteúdo da página foi carregado (mídias etc)
+            });
+            
+            window.addEventListener('DOMContentLoaded', function(){
+                console.log('DOMContentLoad disparado');
+                // DOMContentLoad é acionado quando o HTML da página foi carregado
+            });
+
+            window.addEventListener('resize', function(e){
+                console.log('resize disparado');
+                console.log(e);
+            });
+
+            window.addEventListener('scroll', function(e){
+                console.log('scroll disparado');
+                console.log(e);
+                console.log('scrollY', pageYOffset);
+            });
+
+            window.addEventListener('unload', function(){
+                console.log('unload disparado');
+            });
+
+            window.addEventListener('beforeunload', function(){
+                console.log('beforeunload disparado');
+            });
+
+            
+            
+            
+        </script>
+    </body>
+</html>

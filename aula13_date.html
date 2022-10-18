@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript Date Methods </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+
+        <div>
+            <p>Javascript Date Methods</p>
+
+        </div>
+       
+
+        
+        <script>
+
+            var minhaData = new Date();
+            // precisamos sempre utilizar o construtor no caso de datas (new)
+
+            minhaData.getDay();
+            // dia da semana (0 a 6);
+
+            minhaData.getDate();
+            // dia do mês (1 a 31);
+
+            minhaData.getMonth();
+            // mês do ano (0 a 11);
+
+            minhaData.getYear();
+            // retorna o número de anos após 1900
+
+            minhaData.getFullYear();
+            // retorna o ano atual
+
+            minhaData.getHours();
+            // retorna a quantidade de horas passadas (ao instanciar o objeto e não a atual)
+
+            minhaData.getMinutes();
+            // retorna a quantidade de minutos passados
+
+            minhaData.getSeconds();
+            // retorna a quantidade de segundos passados
+
+            minhaData.getTime();
+            // retorna um timestamp atual, número de milisegundos desde jan/1970
+
+            minhaData.setYear();
+            // altera o ano da data
+
+            minhaData.setDate();
+            // altera o dia do mes da data
+
+            minhaData.setMonth();
+            // altera o mes da data
+
+            minhaData = new Date(2022, 5, 15, 19, 20, 17, 500);
+            // Date(ano, mes, dia, hora, minutos, segundos, ms)
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var paragrafos = document.querySelectorAll('p');
+
+            for(i = 0; i < paragrafos.length; i++){
+                paragrafos[i].innerHTML = 
+                reduzirParagrafo(paragrafos[i].innerHTML);
+            }
+
+            function reduzirParagrafo(texto){
+                var arr = texto.split(' ');
+
+                if(arr.length > 10){
+                    return arr.slice(0, 10).join(' ') + '...';
+                }
+
+                return texto;
+            }
+
+        </script>
+            
+            
+
+        
+    </body>
+</html>

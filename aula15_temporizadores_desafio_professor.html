@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript clock</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan S.">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            /* body{
+                height: 100vh;
+                width: 100vw;
+                background-color:beige;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .relogio{
+                font-family: 'Bebas Neue', cursive;
+                font-size: 8rem;
+                text-align: center;
+
+                width: 25rem;
+                padding: 10px;
+
+                background-color: rgb(66, 66, 66);
+                color: white;
+                border-radius: 8px;
+                border: 8px solid gray;
+            } */
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="relogio">
+            
+        </div>
+
+        
+        <script>
+            
+            (function(){
+
+                var $relogio = document.querySelector('.relogio');
+
+                function getHour(){
+                    var data = new Date();
+                    var h = formata(data.getHours());
+                    var m = formata(data.getMinutes());
+                    var s = formata(data.getSeconds());
+
+                    return h + ':' + m + ':' + s;
+                }
+
+                function formata(t){
+                    return t < 10 ? '0' + t : t;
+                }
+
+                function mostraRelogio(atual){
+                    $relogio.textContent = atual;
+                }
+
+                mostraRelogio(getHour());
+
+                setInterval(function(){
+                    mostraRelogio(getHour());
+                }, 1000);
+            })()
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // Minha execução para comparativo:
+            // (function(){
+            //     var $relogio = document.querySelector('.relogio');
+
+            //     var contar = setTimeout(relogioFunciona, 0)
+            //     var segundos = setInterval(relogioFunciona, 1000);
+                
+            //     function relogioFunciona(){
+            //         var dataAtual = new Date();
+            //         var horaAtual = dataAtual.getHours() < 10 ? '0' + dataAtual.getHours() : dataAtual.getHours();
+            //         var minutoAtual = dataAtual.getMinutes() < 10 ? '0' + dataAtual.getMinutes() : dataAtual.getMinutes();
+            //         var segundoAtual = dataAtual.getSeconds() < 10 ? '0' + dataAtual.getSeconds() : dataAtual.getSeconds();
+
+            //         $relogio.textContent = horaAtual + ':' + minutoAtual + ':' + segundoAtual;
+                    
+            //     };
+            // })()
+
+        </script>
+            
+            
+
+        
+    </body>
+</html>

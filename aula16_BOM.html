@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Javascript BOM</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan S.">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="javascript, tecnologia">
+    </head>
+
+    <body>
+        <h1>Javascript BOM (Browser Object Model)</h1>
+        
+        
+        <script>
+            // SCREEN
+            innerHeight;
+            innerWidth;
+            // área interna disponível do browser
+
+            outerHeight;
+            outerWidth;
+            // área total do browser
+
+            opener;
+            // retorna de onde a url foi aberta
+
+            pageXOffset;
+            pageYOffset;
+            // retorna o quanto foi scrollado na página horizontal ou vertical
+
+            screenX;
+            screenY;
+            // retorna a posição da janela em relação ao monitor
+
+
+            // HISTORY
+
+            history.length;
+            // retorna a quantidade de páginas acessadas
+
+            history.go();
+            // avança ao número desejado dentro da lista de páginas já acessadas
+
+            history.back();
+            // retorna uma página no histórico
+
+            history.forward();
+            // avança uma página no histórico
+
+
+            // LOCATION
+
+            location;
+            // retorna todas as propriedades que podemos acessar da URl
+
+            location.href;
+            // retorna a url em que estamos navegando
+
+            location.protocol;
+            // retorna o arquivo em que estamos acessando ("file" quando em um arquivo interno, "https" em uma página online, por exemplo)
+
+            location.search;
+            // retorna o que foi buscado na url, inserido após '?'' na url
+
+            location.hash
+            // retorna o que foi inserido após '#'' na url
+
+            location.reload();
+            // recarrega a página
+
+            location.assign('ulr aqui');
+            // o browser acessa a url inserida, adicionando a página a length
+
+            location.replace('url aqui');
+            // assim como o assign, o replace vai acessar a url inserida mas o history não é alterado, a url inserida vai substituir a url atual e manter a length
+
+            
+            // NAVIGATOR
+
+            navigator;
+            // retorna todas as informações e propriedades ao navegador utilizado
+
+            navigator.userAgent;
+            // muito utilizado, retorna o browser em que está vindo a requisição
+
+
+            // SCREEN
+
+            screen;
+            // retorna informações sobre a tela do usuário, como altura/largura totais e disponíveis (resolução)
+
+            // BOM - MÉTODOS
+
+            window.open('url aqui', 'janela', 'width=600,height=400');
+            // abre uma nova janela com a url inserida
+
+            window.close();
+            // fecha a janela, apenas fecha janelas abertas através do método open
+
+            scrollTo(0, 100);
+            // scrolla até a posição inserida 'x, y' (fixo)
+
+            scrollBy(0, 50);
+            // soma e scrolla a quantidade inserida acumulando (0, 50 + 0, 50 + 0, 50)
+
+            print();
+            // abre a tela de impressão da página (a mesma do ctrl + P)
+            
+        </script>
+    </body>
+</html>
